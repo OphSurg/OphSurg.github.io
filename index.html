@@ -148,5 +148,29 @@ footer{padding:31px 22px 44px;text-align:center;color:#9098a8;font-size:12px;bor
   </div>
 </div></section>
 <footer>OphSurg</footer>
+<script>
+window.addEventListener('load', () => {
+  const gifUrls = [...new Set(
+    [...document.querySelectorAll('img[src$=".gif"]')].map(image => image.src)
+  )];
+  let index = 0;
+
+  const preloadNext = () => {
+    if (index >= gifUrls.length) return;
+    const preloader = new Image();
+    preloader.onload = preloader.onerror = () => {
+      index += 1;
+      setTimeout(preloadNext, 0);
+    };
+    preloader.src = gifUrls[index];
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(preloadNext, { timeout: 1500 });
+  } else {
+    setTimeout(preloadNext, 500);
+  }
+});
+</script>
 </body>
 </html>
