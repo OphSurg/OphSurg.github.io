@@ -139,5 +139,34 @@ footer{padding:31px 22px 44px;text-align:center;color:#9098a8;font-size:12px;bor
   </div>
 </div></section>
 <footer>OphSurg</footer>
+<script>
+(() => {
+  const nav = document.querySelector('.nav');
+
+  function scrollToSection(hash, smooth = true) {
+    if (!hash || hash === '#') return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 1;
+    window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
+  }
+
+  document.querySelectorAll('.nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      event.preventDefault();
+      history.pushState(null, '', hash);
+      scrollToSection(hash);
+    });
+  });
+
+  window.addEventListener('hashchange', () => scrollToSection(location.hash, false));
+  if (location.hash) {
+    window.addEventListener('load', () => requestAnimationFrame(() => scrollToSection(location.hash, false)));
+  }
+})();
+</script>
 </body>
 </html>
