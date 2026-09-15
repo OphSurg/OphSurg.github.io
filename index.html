@@ -14,12 +14,11 @@
   --shadow:0 14px 38px rgba(34,45,75,.07); --radius:20px; --max:1080px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:auto}
 body{margin:0;padding:34px 20px;overflow-x:hidden;background:#f1f4f8;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.62}
 a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
-.page-shell{width:100%;max-width:1120px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 16px 42px rgba(31,42,68,.08);overflow:hidden}.nav{position:static;background:#fff}.nav-inner{max-width:var(--max);min-height:64px;margin:auto;padding:6px 28px 20px;display:flex;align-items:center;justify-content:center}.links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;font-size:13px;font-weight:750;color:var(--ink)}.links a{padding:9px 17px;border:1px solid #dfe4eb;border-radius:999px;background:#f8fafc;transition:background .2s ease,color .2s ease,transform .2s ease}.links a:hover{background:var(--teal);border-color:var(--teal);color:#fff;transform:translateY(-1px)}
+.page-shell{width:100%;max-width:1120px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 16px 42px rgba(31,42,68,.08);overflow:hidden}
 .hero{position:relative;padding:54px 28px 18px;display:flex;align-items:center;justify-content:center;text-align:center;background:#fff;overflow:hidden}.hero-title{position:relative;display:flex;flex-direction:column;align-items:center;gap:13px;width:100%;max-width:940px}.hero-brand{margin:0;color:var(--teal);font-size:clamp(38px,5vw,58px);line-height:1;letter-spacing:-.05em;font-weight:900}.hero-subtitle{margin:0;max-width:900px;color:#111827;font-size:clamp(20px,2.7vw,32px);line-height:1.22;letter-spacing:-.025em;font-weight:750}
-section{padding:46px 40px}.anchor-target{height:0;margin:0;visibility:hidden;pointer-events:none}.container{width:100%;max-width:var(--max);min-width:0;margin:auto}
+section{padding:46px 40px}.container{width:100%;max-width:var(--max);min-width:0;margin:auto}
 .section-head{max-width:none;margin-bottom:24px;padding-bottom:17px;border-bottom:2px solid #edf0f4}.kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:850;color:var(--blue)}
 h2{margin:7px 0 10px;font-size:clamp(30px,4vw,42px);line-height:1.12;letter-spacing:-.042em}.lead{margin:0;color:var(--muted);font-size:15px}
 .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 9px 25px rgba(34,45,75,.045);overflow:hidden}
@@ -35,7 +34,7 @@ h2{margin:7px 0 10px;font-size:clamp(30px,4vw,42px);line-height:1.12;letter-spac
 .real{background:#fff;border-top:1px solid #f0f2f5}.real-grid{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(260px,.72fr);gap:16px;align-items:stretch}.real-media{width:100%;min-width:0;padding:14px;display:flex;flex-direction:column}.gif-grid{width:100%;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start}.gif-card{width:100%;min-width:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.gif-frame{height:150px;display:flex;align-items:center;justify-content:center;padding:8px;background:#fff}.gif-card img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;background:#fff;display:block}.gif-label{min-width:0;padding:8px 10px;font-size:12px;font-weight:700;color:var(--muted);text-align:center;border-top:1px solid var(--line);overflow-wrap:anywhere}.real-copy{padding:14px;display:flex;flex-direction:column;height:100%}.score-stack{display:grid;grid-template-rows:1fr 1fr;gap:10px;flex:1}.score{border:1px solid var(--line);border-radius:14px;padding:14px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:150px;background:#fff}.score .model{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:4px}.score strong{display:block;font-size:32px;line-height:1.05}.score span{font-size:12px;color:var(--muted);margin-top:6px}.mini-note{margin-top:12px;padding:0 4px;font-size:12px;color:var(--muted);line-height:1.5;text-align:center}
 footer{padding:28px 22px 34px;text-align:center;color:#9098a8;font-size:12px;border-top:1px solid var(--line);background:#fff}
 @media(max-width:860px){body{padding:18px 12px}.page-shell{border-radius:14px}.result-grid,.real-grid,.overview-grid{grid-template-columns:minmax(0,1fr)}.gif-grid,.result-gif-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.result-grid>*,.real-grid>*,.overview-grid>*,.gif-grid>*,.result-gif-grid>*{min-width:0}.overview-figure{max-width:100%}.overview-figure img{max-height:none}.table-wrap{max-width:100%}table{min-width:560px}}
-@media(max-width:520px){body{padding:0}.page-shell{border:0;border-radius:0;box-shadow:none}.hero{padding:40px 18px 16px}.nav-inner{min-height:auto;padding:4px 16px 20px}.links{gap:8px}.links a{padding:8px 13px;font-size:12px}section{padding:40px 16px}.hero-brand{font-size:clamp(38px,13vw,48px)}.hero-subtitle{font-size:clamp(19px,6.5vw,26px)}h2{font-size:clamp(27px,9vw,35px)}.image-panel,.through-demo,.real-media{padding:10px}.demo-title{align-items:flex-start;flex-direction:column}.result-gif-grid,.gif-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.gif-frame{height:auto;aspect-ratio:1}.speed-row{grid-template-columns:1fr}.score-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}.score{min-height:120px}.table-wrap{border-radius:12px}table{min-width:500px}th,td{padding:5px 4px;font-size:10px}}
+@media(max-width:520px){body{padding:0}.page-shell{border:0;border-radius:0;box-shadow:none}.hero{padding:40px 18px 26px}section{padding:40px 16px}.hero-brand{font-size:clamp(38px,13vw,48px)}.hero-subtitle{font-size:clamp(19px,6.5vw,26px)}h2{font-size:clamp(27px,9vw,35px)}.image-panel,.through-demo,.real-media{padding:10px}.demo-title{align-items:flex-start;flex-direction:column}.result-gif-grid,.gif-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.gif-frame{height:auto;aspect-ratio:1}.speed-row{grid-template-columns:1fr}.score-stack{grid-template-columns:1fr 1fr;grid-template-rows:none}.score{min-height:120px}.table-wrap{border-radius:12px}table{min-width:500px}th,td{padding:5px 4px;font-size:10px}}
 </style>
 </head>
 <body>
@@ -46,9 +45,7 @@ footer{padding:28px 22px 34px;text-align:center;color:#9098a8;font-size:12px;bor
     <p class="hero-subtitle">A Workflow-Oriented Simulation Platform for Robot Learning in Ophthalmic Surgery</p>
   </div>
 </header>
-<nav class="nav" aria-label="Page sections"><div class="nav-inner"><div class="links"><a href="#overview">Overview</a><a href="#results">Results</a><a href="#real">Real World</a></div></div></nav>
 
-<div id="overview" class="anchor-target" aria-hidden="true"></div>
 <section class="overview"><div class="container">
   <div class="section-head"><div class="kicker">Overview</div><h2>Ophthalmic-specific simulation and learning</h2><p class="lead">The system integrates robot modeling, retinal environment reconstruction, task-specific interaction, and learning-oriented evaluation.</p></div>
   <div class="panel image-panel overview-figure"><img src="assets/overview.webp?v=__BUILD_VERSION__" alt="OphSurg system overview"></div>
@@ -60,7 +57,6 @@ footer{padding:28px 22px 34px;text-align:center;color:#9098a8;font-size:12px;bor
   </div>
 </div></section>
 
-<div id="results" class="anchor-target" aria-hidden="true"></div>
 <section class="results"><div class="container">
   <div class="section-head"><div class="kicker">Results</div><h2>Task learning across observation and data settings</h2><p class="lead">Success rates are averaged over three held-out evaluation seeds.</p></div>
   <div class="table-wrap"><table>
@@ -128,7 +124,6 @@ footer{padding:28px 22px 34px;text-align:center;color:#9098a8;font-size:12px;bor
   </div>
 </div></section>
 
-<div id="real" class="anchor-target" aria-hidden="true"></div>
 <section class="real"><div class="container">
   <div class="section-head"><div class="kicker">Preliminary Real-World Evaluation</div><h2>Physical execution of fine manipulation</h2><p class="lead">NeedleEntry uses 30 physical demonstrations to evaluate learned visuomotor execution on the ophthalmic robotic system. This is not a simulation-to-real transfer experiment.</p></div>
   <div class="real-grid">
